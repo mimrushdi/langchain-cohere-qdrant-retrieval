@@ -18,7 +18,7 @@ CORS(app)
 # Test default route
 @app.route('/')
 def hello_world():
-    return {"Hello":"World"}
+    return "Hello World"
 
 ## Embedding code
 from langchain.embeddings import CohereEmbeddings
