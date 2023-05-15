@@ -55,4 +55,4 @@ def retrieve_info():
     chain = load_qa_chain(OpenAI(openai_api_key=openai_api_key,temperature=0.2), chain_type="stuff")
     results = chain({"input_documents": search_results, "question": query}, return_only_outputs=True)
     
-    return {"results":results["output_text"]}
+    return results["output_text"]
